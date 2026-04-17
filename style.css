@@ -1,93 +1,52 @@
+/* GENERAL */
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(to right, #eef2f3, #dfe9f3);
+    background-color: #f4f4f4;
     text-align: center;
     margin: 0;
     padding: 0;
 }
 
-/* Container */
-.container {
-    max-width: 800px;
-    margin: auto;
-    padding: 20px;
-}
-
-/* Navbar */
+/* NAVBAR */
 .navbar {
     background-color: #333;
     padding: 15px;
+    text-align: center;
 }
 
 .navbar a {
     color: white;
-    margin: 15px;
+    margin: 0 15px;
     text-decoration: none;
     font-weight: bold;
+    transition: 0.3s;
 }
 
 .navbar a:hover {
     color: #00bcda;
 }
 
-/* Headings */
-h1 {
-    color: #2c3e50;
-    margin-top: 40px;
-    font-size: 40px;
-}
-
-h2 {
-    margin-top: 30px;
-}
-
-/* Paragraph */
-p {
-    font-size: 18px;
-    color: #333;
-}
-
-/* Buttons (links) */
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-li a {
-    display: inline-block;
-    background-color: #2c3e50;
-    color: white;
-    padding: 10px 20px;
-    margin: 10px;
-    border-radius: 8px;
-    text-decoration: none;
-}
-
-li a:hover {
-    background-color: #00bcda;
-}
-.banner {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-}
-.banner {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-top: 10px;
-}
-/* HERO IMAGE */
+/* HERO SECTION */
 .hero {
     position: relative;
-    width: 100%;
+    margin-bottom: 30px;
 }
 
 .hero img {
     width: 100%;
-    height: 350px;
+    height: 400px;
     object-fit: cover;
+}
+
+/* DARK OVERLAY */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
 }
 
 /* TEXT ON IMAGE */
@@ -97,104 +56,80 @@ li a:hover {
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-    text-align: center;
-}
-
-.hero-text h1 {
-    font-size: 45px;
-    margin: 0;
-}
-
-.hero-text p {
-    font-size: 20px;
-}
-
-/* DARK OVERLAY (makes text easier to read) */
-.hero::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 300px;
-    background: rgba(0, 0, 0, 0.2);
-}
-
-/* Make sure text stays on top */
-.hero-text {
-    z-index: 2;
-}
-
-/* FOOTER */
-.footer {
-    background-color: #333;
-    color: white;
-    padding: 15px;
-    margin-top: 40px;
-}
-.hero {
-    position: relative;
-}
-
-.hero-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    text-align: center;
-    background: rgba(0,0,0,0.4);
-    padding: 20px;
-    border-radius: 10px;
-}
-.hero {
-    position: relative;
-}
-
-.hero::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* dark overlay */
-}
-.hero-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
     z-index: 1;
 }
+
 .hero-text h1 {
-    color: white;
-    text-lightshadow: 3px 3px 10px black;
+    font-size: 48px;
+    margin-bottom: 10px;
+    text-shadow: 3px 3px 10px black;
 }
 
 .hero-text p {
-    color: white;
+    font-size: 18px;
     text-shadow: 2px 2px 6px black;
 }
-.hero-text h1 {
-    font-size: 50px;
-    font-weight: bold;
-    letter-spacing: 1px;
+
+/* MAIN CONTENT BOX */
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
 }
+
+/* HEADINGS */
+h1 {
+    color: #2c3e50;
+    margin-top: 20px;
+}
+
+.container h2 {
+    margin-top: 20px;
+    font-size: 28px;
+}
+
+/* PARAGRAPHS */
+p {
+    font-size: 18px;
+    color: #333;
+}
+
+/* BUTTONS */
 .container a {
     display: inline-block;
-    margin: 10px;
-    padding: 12px 25px;
     background-color: #333;
     color: white;
-    border-radius: 25px;
+    padding: 12px 20px;
+    margin: 10px;
+    border-radius: 8px;
     text-decoration: none;
     font-weight: bold;
     transition: 0.3s;
 }
 
 .container a:hover {
-    background-color: #00bcd4;
+    background-color: #00bcda;
     transform: scale(1.05);
+}
+
+/* SMOOTH FADE-IN ANIMATION */
+.hero-text {
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.container {
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
