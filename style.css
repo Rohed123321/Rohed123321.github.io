@@ -26,7 +26,6 @@ body {
     color: #00bcda;
 }
 
-/* HERO SECTION */
 .hero {
     position: relative;
     margin-bottom: 30px;
@@ -36,9 +35,9 @@ body {
     width: 100%;
     height: 400px;
     object-fit: cover;
+    display: block;
 }
 
-/* DARK OVERLAY */
 .hero::before {
     content: "";
     position: absolute;
@@ -46,27 +45,25 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.25);
 }
 
-/* TEXT ON IMAGE */
 .hero-text {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white;
-    z-index: 1;
-    animation: fadeIn 1.5s ease-in-out;
+    z-index: 2;
+    text-align: center;
+    animation: heroFade 1.5s ease-in-out;
 }
 
 .hero-text h1 {
-    font-size: 48px;
-    margin-bottom: 10px;
+    color: white;
+    font-size: 54px;
+    margin: 0 0 10px 0;
     text-shadow: 3px 3px 10px black;
-    letter-spacing: 1px;
-}
-
+    letter-spacing: 1px
 .hero-text p {
     font-size: 18px;
     text-shadow: 2px 2px 6px black;
