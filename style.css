@@ -57,26 +57,30 @@ body {
     transform: translate(-50%, -50%);
     color: white;
     z-index: 1;
+    animation: fadeIn 1.5s ease-in-out;
 }
 
 .hero-text h1 {
     font-size: 48px;
     margin-bottom: 10px;
     text-shadow: 3px 3px 10px black;
+    letter-spacing: 1px;
 }
 
 .hero-text p {
     font-size: 18px;
     text-shadow: 2px 2px 6px black;
+    opacity: 0.9;
 }
 
-/* MAIN CONTENT BOX */
+/* MAIN CONTENT */
 .container {
     max-width: 800px;
     margin: auto;
     padding: 20px;
     background: white;
     border-radius: 12px;
+    animation: fadeIn 2s ease-in-out;
 }
 
 /* HEADINGS */
@@ -90,7 +94,7 @@ h1 {
     font-size: 28px;
 }
 
-/* PARAGRAPHS */
+/* TEXT */
 p {
     font-size: 18px;
     color: #333;
@@ -112,17 +116,19 @@ p {
 .container a:hover {
     background-color: #00bcda;
     transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0,188,218,0.7);
 }
 
-/* SMOOTH FADE-IN ANIMATION */
-.hero-text {
-    animation: fadeIn 1.5s ease-in-out;
+/* FOOTER */
+footer {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    font-size: 14px;
 }
 
-.container {
-    animation: fadeIn 2s ease-in-out;
-}
-
+/* ANIMATION */
 @keyframes fadeIn {
     from {
         opacity: 0;
