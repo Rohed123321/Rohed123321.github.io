@@ -177,3 +177,24 @@ li a:hover {
     color: white;
     text-shadow: 2px 2px 6px black;
 }
+.hero-text h1 {
+    font-size: 50px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.container a {
+    display: inline-block;
+    margin: 10px;
+    padding: 12px 25px;
+    background-color: #333;
+    color: white;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.container a:hover {
+    background-color: #00bcd4;
+    transform: scale(1.05);
+}
